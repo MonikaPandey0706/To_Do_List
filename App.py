@@ -1,15 +1,17 @@
 #Intialized a Python File
 
+
 import json
 import os
 from datetime import datetime, timedelta
+
 
 # --- Constants ---
 # File to store task data.
 TASKS_FILE = 'student_tasks.json'
 
 # Allowed task priorities.
-ALLOWED_PRIORITIES = ["High", "Medium", "Low"]
+ALLOWED_PRIORITIES = ["Highest Priorities", "Medium Priorities", "Lowest Priorities"]
 
 # Allowed task statuses.
 ALLOWED_STATUSES = ["Pending", "Completed"]
@@ -284,7 +286,9 @@ class StudyManager:
         else:
             task_to_update.status = new_status
             self._save_tasks()
-            print(f"{COLOR_GREEN}\nTask '{task_to_update.title}' status updated to '{new_status}'.{COLOR_RESET}")
+            print(f"{COLOR_GREEN}\nTask '{task_to_update.
+
+            title}' status updated to '{new_status}'.{COLOR_RESET}")
             task_to_update.display()
         input(f"\n{COLOR_BLUE}Press Enter to continue...{COLOR_RESET}")
 
